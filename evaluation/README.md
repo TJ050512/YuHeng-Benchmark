@@ -31,9 +31,7 @@ required for a new raw-response pipeline.
 
 ## Prompt artifacts and parser contract
 
-Appendix D.1 of the submitted supplement prints the structured inference
-prompt, but no standalone prompt JSON was included in the original package.
-The [`prompts/`](prompts/) directory now contains:
+The [`prompts/`](prompts/) directory contains:
 
 - a [machine-readable documentary transcription](prompts/appendix_prompt_transcription.json)
   that preserves the printed keys, legacy labels, ordering, and wording; and
@@ -41,7 +39,7 @@ The [`prompts/`](prompts/) directory now contains:
   for future adapters using `Normal`, `Suggestive`, and `Violation`.
 
 The distinction is intentional: the first records what is visibly printed in
-the submitted supplement, while the second is a forward-looking compatibility
+the included supplement, while the second is a forward-looking compatibility
 artifact. Neither is a retained historical API request. The reference parser
 accepts documented space/underscore key aliases and historical label aliases,
 including `Teasing`, `Soft_Porn`, and `Illegal`, and requires all six prompt
