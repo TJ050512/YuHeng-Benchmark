@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "YuHeng sample",
+  "type": "object",
+  "required": ["global_id", "domain", "text", "image_path", "Lv", "Lt", "La", "GT"],
+  "properties": {
+    "global_id": {"type": "string", "pattern": "^YuHeng-[0-9]{6}$"},
+    "domain": {"enum": ["sexual_innuendo", "gender_bias", "socio_economic", "geographic_cultural_bias"]},
+    "text": {"type": "string"},
+    "image_path": {"type": ["string", "null"]},
+    "association": {"type": ["string", "null"]},
+    "implicit_mechanism": {"type": ["string", "null"]},
+    "Lv": {"$ref": "#/$defs/label"},
+    "Lt": {"$ref": "#/$defs/label"},
+    "La": {"$ref": "#/$defs/label"},
+    "GT": {"$ref": "#/$defs/label"},
+    "La_derivation": {"type": ["string", "null"]},
+    "is_placeholder": {"type": "boolean"},
+    "is_synthetic": {"type": "boolean"}
+  },
+  "$defs": {
+    "label": {"enum": ["Normal", "Suggestive", "Violation"]}
+  }
+}

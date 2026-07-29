@@ -1,0 +1,20 @@
+{
+  "tool": "macOS Vision accurate OCR (zh-Hans + en-US) and face rectangles",
+  "scope": 900,
+  "errors": 0,
+  "images_with_faces": 0,
+  "ocr_pattern_flags": 0,
+  "patterns": [
+    "at_handle",
+    "mobile",
+    "id_card",
+    "long_number",
+    "url",
+    "contact_hint",
+    "ip_location",
+    "profile_hint"
+  ],
+  "limitations": [
+    "Automated OCR and face detection reduce but cannot prove the absence of every personal identifier."
+  ]
+}

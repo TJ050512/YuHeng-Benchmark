@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "record_count": 900,
+  "unique_global_ids": 900,
+  "domain_counts": {
+    "sexual_innuendo": 225,
+    "gender_bias": 225,
+    "socio_economic": 225,
+    "geographic_cultural_bias": 225
+  },
+  "covered_cells": 36,
+  "GT": {
+    "Violation": 447,
+    "Suggestive": 453
+  },
+  "La": {
+    "Normal": 820,
+    "Violation": 80
+  },
+  "unique_release_sha256": 900,
+  "perceptual_duplicate_pairs": [],
+  "full_semantic_duplicate_groups": [],
+  "weak_associations": 0,
+  "missing_mechanisms": 0,
+  "release_images_with_exif": 0,
+  "release_images_with_nonessential_embedded_metadata": 0,
+  "final_vision": {
+    "scanned": 900,
+    "errors": 0,
+    "face_images": 0,
+    "ocr_pattern_flags": 0
+  },
+  "source_aigc_label_1_exceptions": [
+    "YuHeng-004480"
+  ],
+  "errors": [],
+  "warnings": [
+    "Automated OCR and face detection reduce but cannot prove the absence of every personal identifier.",
+    "YuHeng-004480 is retained as the sole record in its source Lv x Lt cell and is explicitly disclosed as carrying source AIGC Label=1 metadata; the release copy strips that metadata but preserves provenance.",
+    "Original per-rater La ballots are not retained in the standardized source export."
+  ]
+}

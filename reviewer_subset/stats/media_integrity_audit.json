@@ -1,0 +1,68 @@
+{
+  "audit_name": "release_900_media_integrity",
+  "version": 1,
+  "scope": {
+    "release_records": 900,
+    "unique_global_ids": 900,
+    "full_dataset_records": 5984
+  },
+  "checks": {
+    "source_join": {
+      "status": "PASS",
+      "matched": 900,
+      "missing_ids": []
+    },
+    "source_media_status": {
+      "status": "PASS",
+      "counts": {
+        "found": 900
+      },
+      "non_found_ids": []
+    },
+    "placeholder": {
+      "status": "PASS",
+      "source_flag_count": 0,
+      "source_flag_ids": [],
+      "pixel_match_count": 0,
+      "pixel_match_ids": [],
+      "method": "Decoded RGB dimensions and pixel SHA-256 compared with the full source placeholder media"
+    },
+    "synthetic_repair": {
+      "status": "PASS",
+      "source_flag_count": 0,
+      "source_flag_ids": [],
+      "reference_synthetic_id": "YuHeng-003131",
+      "pixel_match_count": 0,
+      "pixel_match_ids": [],
+      "method": "Source flags plus decoded RGB dimensions and pixel SHA-256"
+    },
+    "semantic_media": {
+      "status": "PASS",
+      "source_has_semantic_media_true": 900,
+      "source_has_semantic_media_false": 0,
+      "false_ids": []
+    },
+    "media_presence": {
+      "status": "PASS",
+      "source_missing_count": 0,
+      "source_missing_ids": [],
+      "release_missing_count": 0,
+      "release_missing_ids": []
+    },
+    "embedded_hash_integrity": {
+      "status": "PASS",
+      "checked": 900,
+      "mismatch_count": 0,
+      "mismatch_ids": []
+    }
+  },
+  "disclosures": {
+    "source_aigc_label_1": {
+      "count": 1,
+      "ids": ["YuHeng-004480"],
+      "distinct_from_synthetic_repair": true,
+      "note": "A source-file metadata flag is not the same as a generated replacement for missing media."
+    }
+  },
+  "overall_status": "PASS"
+}

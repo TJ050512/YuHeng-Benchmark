@@ -1,0 +1,344 @@
+{
+  "dataset": "YuHeng 900 MMAsia 2026 Anonymous Review Release",
+  "seed": 20260713,
+  "selection_count": 900,
+  "per_domain": {
+    "sexual_innuendo": 225,
+    "gender_bias": 225,
+    "socio_economic": 225,
+    "geographic_cultural_bias": 225
+  },
+  "GT": {
+    "Violation": 447,
+    "Suggestive": 453
+  },
+  "La": {
+    "Normal": 820,
+    "Violation": 80
+  },
+  "strict_candidate_count_including_exception": 2135,
+  "vision_exclusions": {
+    "vision_at_handle": 883,
+    "vision_face_detected": 946,
+    "vision_url": 67,
+    "vision_profile_hint": 285,
+    "vision_contact_hint": 133,
+    "vision_long_number": 141,
+    "vision_ip_location": 55,
+    "vision_mobile": 4
+  },
+  "selection_fallbacks": {
+    "text_duplicate_relaxation": 4,
+    "quota_redistributed_after_perceptual_dedup": 2,
+    "perceptual_distance_relaxation": 0,
+    "post_selection_duplicate_replacements": 10
+  },
+  "quota_table": [
+    {
+      "domain": "sexual_innuendo",
+      "Lv": "Normal",
+      "Lt": "Normal",
+      "strict_available": 20,
+      "quota": 20,
+      "selected_count": 20
+    },
+    {
+      "domain": "sexual_innuendo",
+      "Lv": "Normal",
+      "Lt": "Suggestive",
+      "strict_available": 32,
+      "quota": 27,
+      "selected_count": 27
+    },
+    {
+      "domain": "sexual_innuendo",
+      "Lv": "Normal",
+      "Lt": "Violation",
+      "strict_available": 17,
+      "quota": 17,
+      "selected_count": 17
+    },
+    {
+      "domain": "sexual_innuendo",
+      "Lv": "Suggestive",
+      "Lt": "Normal",
+      "strict_available": 130,
+      "quota": 27,
+      "selected_count": 27
+    },
+    {
+      "domain": "sexual_innuendo",
+      "Lv": "Suggestive",
+      "Lt": "Suggestive",
+      "strict_available": 532,
+      "quota": 27,
+      "selected_count": 27
+    },
+    {
+      "domain": "sexual_innuendo",
+      "Lv": "Suggestive",
+      "Lt": "Violation",
+      "strict_available": 53,
+      "quota": 27,
+      "selected_count": 27
+    },
+    {
+      "domain": "sexual_innuendo",
+      "Lv": "Violation",
+      "Lt": "Normal",
+      "strict_available": 51,
+      "quota": 27,
+      "selected_count": 27
+    },
+    {
+      "domain": "sexual_innuendo",
+      "Lv": "Violation",
+      "Lt": "Suggestive",
+      "strict_available": 87,
+      "quota": 27,
+      "selected_count": 27
+    },
+    {
+      "domain": "sexual_innuendo",
+      "Lv": "Violation",
+      "Lt": "Violation",
+      "strict_available": 31,
+      "quota": 26,
+      "selected_count": 26
+    },
+    {
+      "domain": "gender_bias",
+      "Lv": "Normal",
+      "Lt": "Normal",
+      "strict_available": 2,
+      "quota": 2,
+      "selected_count": 2
+    },
+    {
+      "domain": "gender_bias",
+      "Lv": "Normal",
+      "Lt": "Suggestive",
+      "strict_available": 22,
+      "quota": 22,
+      "selected_count": 22
+    },
+    {
+      "domain": "gender_bias",
+      "Lv": "Normal",
+      "Lt": "Violation",
+      "strict_available": 53,
+      "quota": 37,
+      "selected_count": 37
+    },
+    {
+      "domain": "gender_bias",
+      "Lv": "Suggestive",
+      "Lt": "Normal",
+      "strict_available": 14,
+      "quota": 13,
+      "selected_count": 13
+    },
+    {
+      "domain": "gender_bias",
+      "Lv": "Suggestive",
+      "Lt": "Suggestive",
+      "strict_available": 70,
+      "quota": 37,
+      "selected_count": 37
+    },
+    {
+      "domain": "gender_bias",
+      "Lv": "Suggestive",
+      "Lt": "Violation",
+      "strict_available": 136,
+      "quota": 38,
+      "selected_count": 38
+    },
+    {
+      "domain": "gender_bias",
+      "Lv": "Violation",
+      "Lt": "Normal",
+      "strict_available": 8,
+      "quota": 8,
+      "selected_count": 8
+    },
+    {
+      "domain": "gender_bias",
+      "Lv": "Violation",
+      "Lt": "Suggestive",
+      "strict_available": 30,
+      "quota": 29,
+      "selected_count": 29
+    },
+    {
+      "domain": "gender_bias",
+      "Lv": "Violation",
+      "Lt": "Violation",
+      "strict_available": 231,
+      "quota": 39,
+      "selected_count": 39
+    },
+    {
+      "domain": "socio_economic",
+      "Lv": "Normal",
+      "Lt": "Normal",
+      "strict_available": 28,
+      "quota": 27,
+      "selected_count": 27
+    },
+    {
+      "domain": "socio_economic",
+      "Lv": "Normal",
+      "Lt": "Suggestive",
+      "strict_available": 93,
+      "quota": 74,
+      "selected_count": 74
+    },
+    {
+      "domain": "socio_economic",
+      "Lv": "Normal",
+      "Lt": "Violation",
+      "strict_available": 30,
+      "quota": 29,
+      "selected_count": 29
+    },
+    {
+      "domain": "socio_economic",
+      "Lv": "Suggestive",
+      "Lt": "Normal",
+      "strict_available": 10,
+      "quota": 10,
+      "selected_count": 10
+    },
+    {
+      "domain": "socio_economic",
+      "Lv": "Suggestive",
+      "Lt": "Suggestive",
+      "strict_available": 69,
+      "quota": 67,
+      "selected_count": 67
+    },
+    {
+      "domain": "socio_economic",
+      "Lv": "Suggestive",
+      "Lt": "Violation",
+      "strict_available": 11,
+      "quota": 11,
+      "selected_count": 11
+    },
+    {
+      "domain": "socio_economic",
+      "Lv": "Violation",
+      "Lt": "Normal",
+      "strict_available": 1,
+      "quota": 1,
+      "selected_count": 1
+    },
+    {
+      "domain": "socio_economic",
+      "Lv": "Violation",
+      "Lt": "Suggestive",
+      "strict_available": 3,
+      "quota": 3,
+      "selected_count": 3
+    },
+    {
+      "domain": "socio_economic",
+      "Lv": "Violation",
+      "Lt": "Violation",
+      "strict_available": 3,
+      "quota": 3,
+      "selected_count": 3
+    },
+    {
+      "domain": "geographic_cultural_bias",
+      "Lv": "Normal",
+      "Lt": "Normal",
+      "strict_available": 31,
+      "quota": 31,
+      "selected_count": 31
+    },
+    {
+      "domain": "geographic_cultural_bias",
+      "Lv": "Normal",
+      "Lt": "Suggestive",
+      "strict_available": 206,
+      "quota": 71,
+      "selected_count": 71
+    },
+    {
+      "domain": "geographic_cultural_bias",
+      "Lv": "Normal",
+      "Lt": "Violation",
+      "strict_available": 16,
+      "quota": 16,
+      "selected_count": 16
+    },
+    {
+      "domain": "geographic_cultural_bias",
+      "Lv": "Suggestive",
+      "Lt": "Normal",
+      "strict_available": 9,
+      "quota": 8,
+      "selected_count": 8
+    },
+    {
+      "domain": "geographic_cultural_bias",
+      "Lv": "Suggestive",
+      "Lt": "Suggestive",
+      "strict_available": 77,
+      "quota": 70,
+      "selected_count": 70
+    },
+    {
+      "domain": "geographic_cultural_bias",
+      "Lv": "Suggestive",
+      "Lt": "Violation",
+      "strict_available": 9,
+      "quota": 9,
+      "selected_count": 9
+    },
+    {
+      "domain": "geographic_cultural_bias",
+      "Lv": "Violation",
+      "Lt": "Normal",
+      "strict_available": 3,
+      "quota": 3,
+      "selected_count": 3
+    },
+    {
+      "domain": "geographic_cultural_bias",
+      "Lv": "Violation",
+      "Lt": "Suggestive",
+      "strict_available": 14,
+      "quota": 14,
+      "selected_count": 14
+    },
+    {
+      "domain": "geographic_cultural_bias",
+      "Lv": "Violation",
+      "Lt": "Violation",
+      "strict_available": 3,
+      "quota": 3,
+      "selected_count": 3
+    }
+  ],
+  "privacy": {
+    "vision_scanned_candidates": 4358,
+    "selected_vision_privacy_flags": 0,
+    "selected_vision_faces": 0,
+    "source_aigc_label_1_exceptions": [
+      "YuHeng-004480"
+    ],
+    "all_release_exif_stripped": true
+  },
+  "duplicates": {
+    "unique_release_sha256": 900,
+    "unique_normalized_texts": 888
+  },
+  "media": {
+    "logical_bytes": 232916466,
+    "max_file_bytes": 3511294,
+    "all_files_below_8MiB": true
+  }
+}

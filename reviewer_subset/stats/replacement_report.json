@@ -1,0 +1,54 @@
+{
+  "replacements": [
+    {
+      "removed": "YuHeng-002500",
+      "added": "YuHeng-002302",
+      "reason": "full semantic duplicate"
+    },
+    {
+      "removed": "YuHeng-004655",
+      "added": "YuHeng-005001",
+      "reason": "perceptual duplicate image"
+    },
+    {
+      "removed": "YuHeng-000702",
+      "added": "YuHeng-000935",
+      "reason": "final Vision long-number flag"
+    },
+    {
+      "removed": "YuHeng-001509",
+      "added": "YuHeng-001570",
+      "reason": "final Vision face detection"
+    },
+    {
+      "removed": "YuHeng-002238",
+      "added": "YuHeng-003397",
+      "reason": "final Vision account-handle flag"
+    },
+    {
+      "removed": "YuHeng-003483",
+      "added": "YuHeng-002394",
+      "reason": "final Vision long-number flag"
+    },
+    {
+      "removed": "YuHeng-004339",
+      "added": "YuHeng-004851",
+      "reason": "final Vision profile-field flag"
+    },
+    {
+      "removed": "YuHeng-004699",
+      "added": "YuHeng-003620",
+      "reason": "final Vision account-handle flag"
+    },
+    {
+      "removed": "YuHeng-005002",
+      "added": "YuHeng-004015",
+      "reason": "final Vision face detection"
+    },
+    {
+      "removed": "YuHeng-005070",
+      "added": "YuHeng-005213",
+      "reason": "final Vision account-handle flag"
+    }
+  ]
+}

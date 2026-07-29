@@ -1,0 +1,326 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://anonymous.invalid/yuheng/reviewer-release-900.schema.json",
+  "title": "YuHeng 900-sample reviewer-release record",
+  "description": "Complete schema for one line of reviewer_subset/dataset.jsonl. Collection-level constraints are checked separately by verify_release_v2.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "global_id",
+    "domain",
+    "domain_zh",
+    "domain_en",
+    "text",
+    "image_path",
+    "association",
+    "implicit_mechanism",
+    "mechanism_categories",
+    "Lv",
+    "Lt",
+    "La",
+    "GT",
+    "cross_modal_safety",
+    "cross_modal_emergent",
+    "label_provenance",
+    "media",
+    "selection"
+  ],
+  "properties": {
+    "global_id": {
+      "type": "string",
+      "pattern": "^YuHeng-[0-9]{6}$"
+    },
+    "domain": {
+      "enum": [
+        "sexual_innuendo",
+        "gender_bias",
+        "socio_economic",
+        "geographic_cultural_bias"
+      ]
+    },
+    "domain_zh": {
+      "enum": [
+        "性暗示",
+        "性别偏见",
+        "社会经济争议（民生）",
+        "地域与文化偏见"
+      ]
+    },
+    "domain_en": {
+      "enum": [
+        "Sexually Suggestive Innuendo",
+        "Gender Bias and Stereotypes",
+        "Socio-Economic Controversies",
+        "Geographic and Cultural Bias"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "image_path": {
+      "type": "string",
+      "pattern": "^data/(sexual_innuendo|gender_bias|socio_economic|geographic_cultural_bias)/images/YuHeng-[0-9]{6}\\.(jpg|png)$"
+    },
+    "association": {
+      "type": "string",
+      "minLength": 1
+    },
+    "implicit_mechanism": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mechanism_categories": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "semantic_polysemy",
+          "homophonic_substitution",
+          "cultural_allusion",
+          "visual_euphemism",
+          "sarcasm_irony",
+          "other_implication"
+        ]
+      }
+    },
+    "Lv": {
+      "$ref": "#/$defs/label"
+    },
+    "Lt": {
+      "$ref": "#/$defs/label"
+    },
+    "La": {
+      "$ref": "#/$defs/label"
+    },
+    "GT": {
+      "$ref": "#/$defs/label"
+    },
+    "cross_modal_safety": {
+      "enum": ["Yes", "No"]
+    },
+    "cross_modal_emergent": {
+      "type": "boolean"
+    },
+    "label_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "Lv",
+        "Lt",
+        "La",
+        "GT",
+        "per_rater_La_ballots_retained"
+      ],
+      "properties": {
+        "Lv": {
+          "const": "source adjudicated export"
+        },
+        "Lt": {
+          "const": "source adjudicated export"
+        },
+        "La": {
+          "enum": [
+            "implicit_cross_modal_normal_plus_normal",
+            "no_additional_association_risk"
+          ]
+        },
+        "GT": {
+          "const": "derived as max(Lv,Lt,La)"
+        },
+        "per_rater_La_ballots_retained": {
+          "const": false
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sha256",
+        "bytes",
+        "width",
+        "height",
+        "metadata_stripped",
+        "vision_privacy_flags",
+        "vision_face_count",
+        "source_aigc_label_1"
+      ],
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8388608
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 128
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 128
+        },
+        "metadata_stripped": {
+          "const": true
+        },
+        "vision_privacy_flags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "vision_face_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_aigc_label_1": {
+          "type": "boolean"
+        }
+      }
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seed",
+        "quality_score",
+        "privacy_first",
+        "exception"
+      ],
+      "properties": {
+        "seed": {
+          "const": 20260713
+        },
+        "quality_score": {
+          "type": "number"
+        },
+        "privacy_first": {
+          "const": true
+        },
+        "exception": {
+          "type": ["string", "null"]
+        },
+        "post_selection_replacement_for": {
+          "type": "string",
+          "pattern": "^YuHeng-[0-9]{6}$"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "label": {
+      "enum": ["Normal", "Suggestive", "Violation"]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"domain": {"const": "sexual_innuendo"}},
+        "required": ["domain"]
+      },
+      "then": {
+        "properties": {
+          "domain_zh": {"const": "性暗示"},
+          "domain_en": {"const": "Sexually Suggestive Innuendo"},
+          "image_path": {"pattern": "^data/sexual_innuendo/images/"}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"domain": {"const": "gender_bias"}},
+        "required": ["domain"]
+      },
+      "then": {
+        "properties": {
+          "domain_zh": {"const": "性别偏见"},
+          "domain_en": {"const": "Gender Bias and Stereotypes"},
+          "image_path": {"pattern": "^data/gender_bias/images/"}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"domain": {"const": "socio_economic"}},
+        "required": ["domain"]
+      },
+      "then": {
+        "properties": {
+          "domain_zh": {"const": "社会经济争议（民生）"},
+          "domain_en": {"const": "Socio-Economic Controversies"},
+          "image_path": {"pattern": "^data/socio_economic/images/"}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"domain": {"const": "geographic_cultural_bias"}},
+        "required": ["domain"]
+      },
+      "then": {
+        "properties": {
+          "domain_zh": {"const": "地域与文化偏见"},
+          "domain_en": {"const": "Geographic and Cultural Bias"},
+          "image_path": {"pattern": "^data/geographic_cultural_bias/images/"}
+        }
+      }
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "GT": {"const": "Normal"},
+            "Lv": {"const": "Normal"},
+            "Lt": {"const": "Normal"},
+            "La": {"const": "Normal"}
+          }
+        },
+        {
+          "properties": {
+            "GT": {"const": "Suggestive"},
+            "Lv": {"enum": ["Normal", "Suggestive"]},
+            "Lt": {"enum": ["Normal", "Suggestive"]},
+            "La": {"enum": ["Normal", "Suggestive"]}
+          },
+          "anyOf": [
+            {"properties": {"Lv": {"const": "Suggestive"}}},
+            {"properties": {"Lt": {"const": "Suggestive"}}},
+            {"properties": {"La": {"const": "Suggestive"}}}
+          ]
+        },
+        {
+          "properties": {
+            "GT": {"const": "Violation"}
+          },
+          "anyOf": [
+            {"properties": {"Lv": {"const": "Violation"}}},
+            {"properties": {"Lt": {"const": "Violation"}}},
+            {"properties": {"La": {"const": "Violation"}}}
+          ]
+        }
+      ]
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "cross_modal_safety": {"const": "Yes"},
+            "cross_modal_emergent": {"const": true}
+          }
+        },
+        {
+          "properties": {
+            "cross_modal_safety": {"const": "No"},
+            "cross_modal_emergent": {"const": false}
+          }
+        }
+      ]
+    }
+  ]
+}

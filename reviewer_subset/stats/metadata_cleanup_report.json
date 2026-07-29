@@ -1,0 +1,25 @@
+{
+  "pixel_identity_preserved": true,
+  "changes": [
+    {
+      "global_id": "YuHeng-002219",
+      "prior_info_keys": [
+        "icc_profile"
+      ],
+      "remaining_info_keys": [],
+      "pixel_sha256": "1cde6eb41a570eb29956b0c0b8e786be587790ab44e0e986f76f5e9510db1efb",
+      "file_sha256_before": "fc30067a6d4e38ed86c84cf5903f41ff397eac2d0a8a8177ccad06dc862bc07e",
+      "file_sha256_after": "304e94592671ce173cdcc7be879ca602d83c08dff22c804a84a3e35f3023a066"
+    },
+    {
+      "global_id": "YuHeng-002222",
+      "prior_info_keys": [
+        "icc_profile"
+      ],
+      "remaining_info_keys": [],
+      "pixel_sha256": "4630efbc8d98740df56a20df7b3c1e3c060d7b5f6cab42ee864f52024a8cf913",
+      "file_sha256_before": "61f1cd46b37bce040bac5cd82c3889773ca45edee013b510f574c106307c517b",
+      "file_sha256_after": "3b11aab9fa7cc8b1b48cf437342390de065f72491a02fe52e2e470966643bf5c"
+    }
+  ]
+}
