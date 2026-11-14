@@ -15,7 +15,7 @@ Source-specific labels such as `Teasing`, `Soft_Porn`, `Soft Porn`, `Malicious`,
 `Irritating`, `Illegal`, and `Insulting` are normalized by
 `evaluation/src/yuheng_eval/labels.py`. The compact core JSON Schema is in
 `documentation/core_schema.json`; the complete 900-record release schema is in
-`reviewer_subset/schema.json`.
+[`public_subset/schema.json`](../public_subset/schema.json).
 
 ## Provenance requirement
 

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "yuheng-eval"
 version = "0.1.0"
-description = "Reference evaluation code for the anonymous YuHeng benchmark submission"
+description = "Reference evaluation code for the YuHeng benchmark"
 requires-python = ">=3.10"
 dependencies = []
 

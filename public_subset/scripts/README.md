@@ -5,7 +5,7 @@ The complete reproduction pipeline requires the private standardized
 dependency with:
 
 ```bash
-python -m pip install -r reviewer_subset/scripts/requirements.txt
+python -m pip install -r public_subset/scripts/requirements.txt
 ```
 
 1. Run `prepare_candidates.py` on the standardized source.
@@ -17,7 +17,7 @@ python -m pip install -r reviewer_subset/scripts/requirements.txt
 Example Vision compilation on macOS:
 
 ```bash
-swiftc -O reviewer_subset/scripts/vision_audit.swift -o /tmp/yuheng_vision_audit
+swiftc -O public_subset/scripts/vision_audit.swift -o /tmp/yuheng_vision_audit
 ```
 
 The selection seed is `20260713`. `YuHeng-004480` is a declared sole-cell AIGC-metadata exception and must not be silently removed or treated as an ordinary non-AIGC source record.

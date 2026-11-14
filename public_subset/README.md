@@ -1,8 +1,7 @@
-# YuHeng 900-record reviewer subset
+# YuHeng 900-record public subset
 
 This directory contains a privacy-first, auditable subset of 900 image--text
-records selected from the standardized 5,984-record YuHeng benchmark for the
-anonymous MMAsia 2026 review.
+records selected from the standardized 5,984-record YuHeng benchmark.
 
 ## Release summary
 
@@ -58,6 +57,6 @@ be described as providing per-rater `La` agreement evidence.
 
 ## Use
 
-This subset supports confidential artifact inspection, defensive safety
-research, and reproducibility review. It is not a training split. Read
-[`DATA_USE_POLICY.md`](DATA_USE_POLICY.md) before redistribution or model use.
+This subset supports artifact inspection and defensive safety evaluation.
+Read the [data use policy](DATA_USE_POLICY.md) before use. The full benchmark
+follows the [controlled-access plan](../documentation/FULL_DATASET_ACCESS.md).

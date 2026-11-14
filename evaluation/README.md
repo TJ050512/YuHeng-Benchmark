@@ -9,11 +9,18 @@ python -m pip install -e evaluation
 python -m unittest discover -s evaluation/tests -v
 ```
 
+## Prediction format
+
 Evaluate aligned JSONL files:
 
 ```bash
 yuheng-eval --gold path/to/gold.jsonl --predictions path/to/predictions.jsonl
 ```
+
+Supply one prediction per gold record in the same order. Each line contains
+`level_of_picture`, `level_of_word`, `final_risk_label`, and
+`cross_modal_safety`. Use `Normal`, `Suggestive`, or `Violation` for the label
+fields and `Yes` or `No` for the cross-modal flag.
 
 The evaluator reports violation recall (VR), implicit violation attenuation
 (IVA), SCAS, MER, and the cardinality of each metric set. SCAS uses the paper's
@@ -31,7 +38,9 @@ required for a new raw-response pipeline.
 
 ## Prompt artifacts and parser contract
 
-The [`prompts/`](prompts/) directory contains:
+[Section D.1 of the included supplementary document](../supplement.pdf) prints
+the structured inference prompt. The [`prompts/`](prompts/) directory also
+contains:
 
 - a [machine-readable documentary transcription](prompts/appendix_prompt_transcription.json)
   that preserves the printed keys, legacy labels, ordering, and wording; and
@@ -50,10 +59,11 @@ not enforce printed key order, Simplified-Chinese sentence count, or semantic
 consistency among predicted fields; field inconsistency remains model behavior
 for the diagnostic metrics to measure rather than a parsing precondition.
 
-Appendix D.2 reports regex extraction, up to three retries, and conservative
-treatment of remaining parsing failures. The current release does not contain
-the historical retry logs and does not implement that end-to-end retry loop in
-the CLI. This boundary is recorded in the prompt transcription itself.
+Appendix D.2 reports up to three retries for malformed or schema-invalid JSON.
+Remaining parse failures count as incorrect non-violation predictions. Generic
+refusals are tracked separately and map to Violation and cross-modal activation
+only in the refusal-aware analysis. The CLI scores rows already prepared under
+the chosen protocol. The reference parser is available to external runners.
 
 Raw model outputs, retry counts, parser failures, refusals, rendered prompts,
 model revisions, and decoding parameters must accompany any reproduced table.
@@ -76,9 +86,4 @@ sample, and human--judge agreement statistics.
 
 API billing records can corroborate paid access to a service, but they cannot
 establish the prompts, model revisions, decoding settings, raw outputs,
-refusals, retries, parser outcomes, or reported metrics. They are therefore not
-treated as reproducibility evidence. Billing documents are not placed in this
-anonymous repository because they may reveal author or institutional identity.
-If the program chairs request corroboration through a confidential channel and
-the review policy permits it, appropriately redacted billing evidence can be
-provided separately.
+refusals, retries, parser outcomes, or reported metrics. Reproducibility requires records of the evaluation runs.

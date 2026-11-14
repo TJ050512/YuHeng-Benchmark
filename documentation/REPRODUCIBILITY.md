@@ -5,7 +5,7 @@ reference metrics. It does not claim full replay of historical model API runs.
 
 ## Directly reproducible
 
-The repository permits reviewers to:
+The repository supports the following checks:
 
 - inspect 900 structured image--text records and their media;
 - validate record count, IDs, domains, labels, and maximum-risk aggregation;

@@ -1,82 +1,22 @@
 # Controlled access to the complete YuHeng benchmark
 
-## Purpose
+The [public subset](../public_subset/README.md) contains 900 privacy-filtered image–text pairs with coverage of all 36 `domain × Lv × Lt` cells. The complete benchmark contains 5,984 pairs. Its source material may be sensitive and subject to privacy, platform, copyright, and redistribution constraints.
 
-The public MMAsia 2026 reviewer artifact contains 900 privacy-filtered
-image--text records: 225 from each domain and coverage of all 36
-`domain × Lv × Lt` cells. It represents approximately 15.0% of the complete
-5,984-record YuHeng benchmark.
+## Planned access after publication
 
-The complete dataset is not linked publicly because it contains sensitive
-source-platform material and may be subject to privacy, platform, copyright,
-and redistribution constraints.
+The paper’s [supplement](../supplement.pdf) describes the controlled-access plan. Application instructions will be posted here when access opens.
 
-## Review-stage procedure
+1. Applicants use a verifiable institutional or research-organization email address.
+2. Applicants describe their project, intended use, and connection to defensive AI safety, robustness, or interpretability.
+3. Approved applicants accept a data use agreement that prohibits redistribution and limits retention to the approved project.
 
-If complete-benchmark inspection is necessary and MMAsia 2026 policy permits
-it:
+The controlled package is intended to provide standardized records, paired media with available provenance disclosures, stable record identifiers, domain labels, and visual, textual, association, and final safety labels. The [reproducibility scope](REPRODUCIBILITY.md) describes the retained evidence.
 
-1. a reviewer, Area Chair, or Program Chair requests access through the
-   official CMT or Program Chair channel;
-2. the Program Chairs confirm that controlled access is compatible with the
-   review policy without disclosing reviewer identity to the authors;
-3. an anonymous, time-limited, read-only link is delivered through that
-   official channel; and
-4. access expires at the end of the authorized review period or at a time
-   specified by the Program Chairs.
+## Conditions of use
 
-Reviewers are not asked to contact the authors directly. The authors must not
-use access activity to infer reviewer identity.
+- Restrict access and retention to the approved project and its authorized users.
+- Do not redistribute the data or share access credentials.
+- Do not identify, contact, profile, or harass source-platform users or depicted individuals.
+- Do not generate harmful content, train systems to evade safety controls, or use the data to circumvent safeguards.
 
-No public or placeholder credential is stored in this repository.
-
-## Material available for inspection
-
-The controlled package may contain:
-
-- all 5,984 standardized benchmark records;
-- paired image--text material with available media-provenance disclosures;
-- stable anonymous record identifiers;
-- the four benchmark domains;
-- visual (`Lv`), textual (`Lt`), associative (`La`), and final (`GT`) labels;
-  and
-- documentation needed to interpret the standardized records.
-
-Unavailable original media or post-collection media repairs must be identified
-in provenance rather than represented as original retrieved files.
-
-## Conditions
-
-Controlled access is limited to confidential peer-review inspection. Authorized
-reviewers must not:
-
-- redistribute, mirror, or publish the dataset or credentials;
-- use the material for model training, commercial use, or unrelated research;
-- identify, contact, profile, or harass source-platform users or depicted
-  individuals;
-- generate harmful content or circumvent safety systems; or
-- disclose sensitive material outside the official review process.
-
-Access does not transfer copyright or grant a general redistribution license
-for source-platform media.
-
-## Evidence limitations
-
-Complete-dataset inspection can establish dataset scale, coverage, paired
-media, labels, and record structure. It cannot recreate historical evidence
-that was not retained, including:
-
-- original retrieval logs, queries, and timestamps;
-- unified per-rater `La` ballots or complete adjudication logs;
-- original raw model responses, retries, refusals, and parser logs;
-- all rendered prompts, decoding settings, and historical model revisions; or
-- MIS judge outputs and human-validation records.
-
-These limitations remain in force even when all 5,984 standardized records are
-available for inspection.
-
-## Post-review research access
-
-Any later research release should use a separately documented application,
-identity-verification, intended-use, and data-use-agreement process. Temporary
-review access does not create a general public-access right.
+Access does not transfer copyright or grant redistribution rights to source-platform media. Violations of the data use agreement may result in revocation.

@@ -361,7 +361,7 @@ def main() -> None:
     available = Counter((row["domain"], row["Lv"], row["Lt"]) for row in strict)
     selected_counts = Counter((row["domain"], row["Lv"], row["Lt"]) for row in public)
     stats = {
-        "dataset": "YuHeng 900 MMAsia 2026 Anonymous Review Release", "seed": args.seed,
+        "dataset": "YuHeng 900 MMAsia 2026 Public Subset", "seed": args.seed,
         "selection_count": len(public), "per_domain": dict(Counter(row["domain"] for row in public)),
         "GT": dict(Counter(row["GT"] for row in public)), "La": dict(Counter(row["La"] for row in public)),
         "strict_candidate_count_including_exception": len(strict),

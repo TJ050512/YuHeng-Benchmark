@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the YuHeng paper."
+title: "YuHeng: Benchmarking Implicit Multimodal Safety in Chinese High-Context Communication"
+authors:
+  - given-names: Xiaoxiao
+    family-names: Ma
+  - given-names: Xiankun
+    family-names: Jiang
+  - given-names: Quan
+    family-names: Fang
+  - given-names: Junjie
+    family-names: Chen
+  - given-names: Shengyu
+    family-names: Yang
+  - given-names: Mingxuan
+    family-names: Cai
+  - given-names: Siyuan
+    family-names: Xue
+repository-code: https://github.com/TJ050512/YuHeng-MMAsia2026-Artifact
+preferred-citation:
+  type: conference-paper
+  title: "YuHeng: Benchmarking Implicit Multimodal Safety in Chinese High-Context Communication"
+  authors:
+    - given-names: Xiaoxiao
+      family-names: Ma
+    - given-names: Xiankun
+      family-names: Jiang
+    - given-names: Quan
+      family-names: Fang
+    - given-names: Junjie
+      family-names: Chen
+    - given-names: Shengyu
+      family-names: Yang
+    - given-names: Mingxuan
+      family-names: Cai
+    - given-names: Siyuan
+      family-names: Xue
+  collection-title: "ACM Multimedia Asia (MMAsia '26)"
+  year: 2026
+  doi: 10.1145/3862739.3863206
+  url: https://doi.org/10.1145/3862739.3863206

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Self-contained integrity check for the public YuHeng reviewer subset."""
+"""Self-contained integrity check for the YuHeng public subset."""
 
 from __future__ import annotations
 
@@ -46,7 +46,7 @@ def main() -> None:
         "release_root",
         nargs="?",
         type=Path,
-        default=Path("reviewer_subset"),
+        default=Path("public_subset"),
     )
     args = parser.parse_args()
 

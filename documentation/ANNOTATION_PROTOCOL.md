@@ -2,7 +2,7 @@
 
 This document summarizes the operational annotation protocol reported for
 YuHeng and distinguishes that reported process from evidence retained in this
-anonymous artifact.
+research artifact.
 
 ## Objective
 

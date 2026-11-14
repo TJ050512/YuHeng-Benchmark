@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://anonymous.invalid/yuheng/reviewer-release-900.schema.json",
-  "title": "YuHeng 900-sample reviewer-release record",
-  "description": "Complete schema for one line of reviewer_subset/dataset.jsonl. Collection-level constraints are checked separately by verify_release_v2.py.",
+  "$id": "https://raw.githubusercontent.com/TJ050512/YuHeng-MMAsia2026-Artifact/main/public_subset/schema.json",
+  "title": "YuHeng 900-sample public subset record",
+  "description": "Complete schema for one line of public_subset/dataset.jsonl. Collection-level constraints are checked separately by verify_release_v2.py.",
   "type": "object",
   "additionalProperties": false,
   "required": [
