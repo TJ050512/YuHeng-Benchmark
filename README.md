@@ -1,9 +1,7 @@
-# YuHeng
+# YuHeng: Benchmarking Implicit Multimodal Safety in Chinese High-Context Communication
 
 [![ACM Multimedia Asia 2026](https://img.shields.io/badge/MMAsia%202026-Regular%20Paper-blue)](#paper)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-yellow)](evaluation/pyproject.toml)
-
-Research artifact for **YuHeng: Benchmarking Implicit Multimodal Safety in Chinese High-Context Communication**.
 
 [Paper DOI](https://doi.org/10.1145/3862739.3863206) · [Supplement](supplement.pdf) · [Public subset](public_subset/README.md) · [Reference evaluator](evaluation/README.md) · [Citation](#citation)
 

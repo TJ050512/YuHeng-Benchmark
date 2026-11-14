@@ -16,7 +16,7 @@ authors:
     family-names: Cai
   - given-names: Siyuan
     family-names: Xue
-repository-code: https://github.com/TJ050512/YuHeng-MMAsia2026-Artifact
+repository-code: https://github.com/TJ050512/YuHeng-Benchmark
 preferred-citation:
   type: conference-paper
   title: "YuHeng: Benchmarking Implicit Multimodal Safety in Chinese High-Context Communication"
