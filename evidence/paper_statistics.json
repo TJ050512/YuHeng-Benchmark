@@ -1,0 +1,113 @@
+{
+  "source": {
+    "paper_doi": "10.1145/3862739.3863206",
+    "overall": "Main paper, Table 1",
+    "per_domain": "Supplementary material, Table 2"
+  },
+  "orientation": "rows=Lv(image), columns=Lt(text)",
+  "labels": [
+    "Normal",
+    "Suggestive",
+    "Violation"
+  ],
+  "total": 5984,
+  "overall": {
+    "Normal": {
+      "Normal": 983,
+      "Suggestive": 722,
+      "Violation": 286
+    },
+    "Suggestive": {
+      "Normal": 918,
+      "Suggestive": 1228,
+      "Violation": 250
+    },
+    "Violation": {
+      "Normal": 336,
+      "Suggestive": 536,
+      "Violation": 725
+    }
+  },
+  "per_domain": {
+    "sexual_innuendo": {
+      "n": 2113,
+      "matrix": {
+        "Normal": {
+          "Normal": 494,
+          "Suggestive": 105,
+          "Violation": 33
+        },
+        "Suggestive": {
+          "Normal": 255,
+          "Suggestive": 716,
+          "Violation": 102
+        },
+        "Violation": {
+          "Normal": 142,
+          "Suggestive": 167,
+          "Violation": 99
+        }
+      }
+    },
+    "gender_bias": {
+      "n": 1395,
+      "matrix": {
+        "Normal": {
+          "Normal": 4,
+          "Suggestive": 27,
+          "Violation": 16
+        },
+        "Suggestive": {
+          "Normal": 44,
+          "Suggestive": 150,
+          "Violation": 72
+        },
+        "Violation": {
+          "Normal": 140,
+          "Suggestive": 334,
+          "Violation": 608
+        }
+      }
+    },
+    "socio_economic": {
+      "n": 1500,
+      "matrix": {
+        "Normal": {
+          "Normal": 393,
+          "Suggestive": 568,
+          "Violation": 232
+        },
+        "Suggestive": {
+          "Normal": 40,
+          "Suggestive": 198,
+          "Violation": 43
+        },
+        "Violation": {
+          "Normal": 1,
+          "Suggestive": 15,
+          "Violation": 10
+        }
+      }
+    },
+    "geographic_cultural_bias": {
+      "n": 976,
+      "matrix": {
+        "Normal": {
+          "Normal": 92,
+          "Suggestive": 22,
+          "Violation": 5
+        },
+        "Suggestive": {
+          "Normal": 579,
+          "Suggestive": 164,
+          "Violation": 33
+        },
+        "Violation": {
+          "Normal": 53,
+          "Suggestive": 20,
+          "Violation": 8
+        }
+      }
+    }
+  }
+}

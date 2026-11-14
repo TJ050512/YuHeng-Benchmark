@@ -39,6 +39,7 @@ The paper reports that strong violation recall can coexist with weak cross-modal
 | [Public subset](public_subset/README.md) | 900 privacy-filtered pairs, schemas, sampling details, and saved audits |
 | [Annotation documentation](documentation/ANNOTATION_PROTOCOL.md) | Reported annotation workflow and retained evidence |
 | [Reference evaluator](evaluation/README.md) | Parser, metrics, command-line tool, and tests |
+| [Paper statistics](evidence/paper_statistics.json) | Machine-readable counts from main paper Table 1 and supplementary Table 2 |
 
 The public subset covers all 36 `domain × Lv × Lt` cells. It contains 447 `Violation` and 453 `Suggestive` final labels. Its balanced domain selection and absence of `GT=Normal` records limit comparisons with the paper’s full-benchmark results. Use it for defensive safety evaluation and artifact inspection. Read the [data use policy](public_subset/DATA_USE_POLICY.md) before using the data.
 

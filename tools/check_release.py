@@ -40,6 +40,48 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def check_paper_statistics(path: Path, errors: list[str]) -> None:
+    stats = read_json(path)
+    labels = stats.get("labels")
+    if labels != list(LABELS):
+        errors.append("paper statistics use unexpected labels")
+        return
+
+    overall = stats.get("overall", {})
+    matrix_total = sum(
+        overall.get(row_label, {}).get(column_label, 0)
+        for row_label in LABELS
+        for column_label in LABELS
+    )
+    if matrix_total != stats.get("total"):
+        errors.append(
+            f"paper overall matrix totals {matrix_total}, "
+            f"expected {stats.get('total')}"
+        )
+
+    domain_total = sum(
+        domain.get("n", 0) for domain in stats.get("per_domain", {}).values()
+    )
+    if domain_total != stats.get("total"):
+        errors.append(
+            f"paper per-domain totals sum to {domain_total}, "
+            f"expected {stats.get('total')}"
+        )
+
+    for domain_name, domain in stats.get("per_domain", {}).items():
+        matrix = domain.get("matrix", {})
+        actual = sum(
+            matrix.get(row_label, {}).get(column_label, 0)
+            for row_label in LABELS
+            for column_label in LABELS
+        )
+        if actual != domain.get("n"):
+            errors.append(
+                f"paper domain {domain_name} matrix totals {actual}, "
+                f"expected {domain.get('n')}"
+            )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -47,6 +89,12 @@ def main() -> None:
         nargs="?",
         type=Path,
         default=Path("public_subset"),
+    )
+    parser.add_argument(
+        "--paper-statistics",
+        "--canonical-statistics",
+        type=Path,
+        default=Path("evidence/paper_statistics.json"),
     )
     args = parser.parse_args()
 
@@ -130,6 +178,8 @@ def main() -> None:
     manifest = read_json(root / "stats" / "selection_manifest.json")
     if manifest != records:
         errors.append("selection_manifest.json does not match dataset.jsonl")
+
+    check_paper_statistics(args.paper_statistics.resolve(), errors)
 
     report = {
         "status": "PASS" if not errors else "FAIL",

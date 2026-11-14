@@ -52,3 +52,8 @@ ballot export or a complete adjudication log. Record-level labels remain
 inspectable, but per-rater `La` agreement cannot be recomputed from this
 artifact.
 
+## Aggregate statistics
+
+The full-benchmark counts from main paper Table 1 and supplementary Table 2
+are transcribed in [paper_statistics.json](../evidence/paper_statistics.json).
+The tables use visual labels as rows and textual labels as columns.

@@ -37,6 +37,9 @@ remain necessary.
 - `stats/`: saved selection, schema, privacy, duplicate, and integrity reports.
 - `scripts/`: release construction and verification utilities.
 
+The full-benchmark tables are available in
+[machine-readable form](../evidence/paper_statistics.json).
+
 ## Declared source-metadata exception
 
 `YuHeng-004480` is the only source record in the
